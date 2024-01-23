@@ -1,10 +1,10 @@
 import '../../stylesheet/_reset.scss';
 import '../../stylesheet/page/_day01.scss';
+import projectSlider from '../components/projectSlider';
 
 const day01 = () => {
+  projectSlider(1);
   const panels = document.querySelectorAll('.panel');
-  // console.log(panels);
-
   function removeActiveClasses() {
     panels.forEach((panel) => {
       panel.classList.remove('active');
