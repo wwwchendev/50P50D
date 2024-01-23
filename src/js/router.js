@@ -141,10 +141,10 @@ const routes = [
     component: 'Day20',
   },
   { path: '/21', title: '21-Drag-N-Drop | 50P50D', component: 'Day21' },
-  { path: '/22', title: '22-DrawingApp | 50P50D', component: 'Day22' },
+  { path: '/22', title: '22-Drawing-App | 50P50D', component: 'Day22' },
   { path: '/23', title: '23-Kinetic-Loader | 50P50D', component: 'Day23' },
   { path: '/24', title: '24-Content-Placeholder | 50P50D', component: 'Day24' },
-  { path: '/25', title: '25-StickyNavbar | 50P50D', component: 'Day25' },
+  { path: '/25', title: '25-Sticky-Navbar | 50P50D', component: 'Day25' },
   {
     path: '/26',
     title: '26-Double-Vertical-Slider | 50P50D',
