@@ -5,7 +5,7 @@ const projectSlider = (currentProject) => {
     const sidebar = document.getElementById('sidebar');
     const El = document.getElementById(`slide${idx + 1}`);
     sidebar.scrollTo({
-      top: El.offsetTop - 100,
+      top: El.offsetTop - 200,
       behavior: 'smooth',
     });
   }

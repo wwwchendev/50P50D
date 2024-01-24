@@ -53,7 +53,6 @@ import Day48 from '../html/pages/Day48.ejs';
 import Day49 from '../html/pages/Day49.ejs';
 import Day50 from '../html/pages/Day50.ejs';
 // script
-import home from './pages/home';
 import day01 from './pages/day01';
 import day02 from './pages/day02';
 import day03 from './pages/day03';
@@ -231,7 +230,7 @@ function renderComponent(component) {
   switch (component) {
     case 'Home':
       render(mainContainer, Day01);
-      home();
+      day01();
       break;
     case 'Day01':
       render(mainContainer, Day01);

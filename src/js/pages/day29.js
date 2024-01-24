@@ -11,9 +11,9 @@ const day29 = () => {
 
   const createHeart = (e) => {
     // 創建包含.fas.fa-heart兩個類別的i元素
-    const heart = document.createElement('i');
-    heart.classList.add('fas');
-    heart.classList.add('fa-heart');
+    const el = document.createElement('div');
+    el.classList.add('fas');
+    el.classList.add('fa-heart');
 
     // 獲取滑鼠點擊位置
     const x = e.clientX;
@@ -25,16 +25,19 @@ const day29 = () => {
     const xInside = x - leftOffset;
     const yInside = y - topOffset;
     // 設定樣式:定位
-    heart.style.top = `${yInside}px`;
-    heart.style.left = `${xInside}px`;
+    el.style.position = `absolute`;
+    el.style.top = `${yInside - 20}px`;
+    el.style.left = `${xInside - 250}px`;
+    el.style.animation = `grow 0.6s linear;`;
+    el.style.position = `absolute`;
 
     // 在loveMe圖片內生成Heart
-    loveMe.appendChild(heart);
+    loveMe.appendChild(el);
     // 前置遞增運算子 先增加變數再賦值
     // eslint-disable-next-line no-plusplus
     times.innerHTML = ++timesClicked;
     // 1秒後移除元素
-    setTimeout(() => heart.remove(), 1000);
+    setTimeout(() => el.remove(), 1000);
   };
   // 判斷雙擊
   loveMe.addEventListener('click', (e) => {
