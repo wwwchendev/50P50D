@@ -19,6 +19,12 @@
     "no-alert": "off",
     "linebreak-style": "off",
     "no-param-reassign": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
     //prettier
     "prettier/prettier": [
       "error",
@@ -52,7 +58,10 @@
           ".css",
           ".scss"
         ]
-      }
+      },
+      "external-module-folders": [
+        "node_modules"
+      ]
     }
   }
 }
