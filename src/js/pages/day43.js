@@ -38,11 +38,15 @@ const day43 = () => {
       // 在被點擊的small的父元素rating加入active類別
       e.target.parentNode.classList.add('active');
       // selectedRating賦值為 當前元素(small)的innerHTML
+
       selectedRating = e.target.innerHTML;
     }
   });
 
   sendBtn.addEventListener('click', () => {
+    if (selectedRating === '') {
+      selectedRating = '滿意';
+    }
     panel.innerHTML = `
           <i class="fas fa-heart"></i>
           <strong>感謝您寶貴的回覆</strong>

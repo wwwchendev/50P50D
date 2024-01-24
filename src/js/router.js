@@ -2,7 +2,6 @@
 import { match } from 'path-to-regexp';
 // pages
 import NotFound from '../html/pages/NotFound.ejs';
-import Home from '../html/pages/Home.ejs';
 import Day01 from '../html/pages/Day01.ejs';
 import Day02 from '../html/pages/Day02.ejs';
 import Day03 from '../html/pages/Day03.ejs';
@@ -107,7 +106,7 @@ import day49 from './pages/day49';
 import day50 from './pages/day50';
 // 定义路由规则
 const routes = [
-  { path: '/', title: 'Home | 50P50D', component: 'Home' },
+  { path: '/', title: 'Home | 50P50D', component: 'Day01' },
   { path: '/01', title: '01-expanding-cards | 50P50D', component: 'Day01' },
   { path: '/02', title: '02-progress-steps | 50P50D', component: 'Day02' },
   { path: '/03', title: '03-rotating-navigation | 50P50D', component: 'Day03' },
@@ -231,7 +230,7 @@ function renderComponent(component) {
   // 创建或加载对应组件
   switch (component) {
     case 'Home':
-      render(mainContainer, Home);
+      render(mainContainer, Day01);
       home();
       break;
     case 'Day01':
