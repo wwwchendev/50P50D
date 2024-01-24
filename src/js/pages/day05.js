@@ -28,14 +28,15 @@ const day05 = () => {
   }
   int = setInterval(blurring, 30);
 
-  // 透過線性映射(in範圍->out範圍)改變數值
-  // 隨著 load 值的0到100範圍的改變，對應到透明度從完全不透明（1）逐漸減少到完全透明（0）的範圍改變。這可以用來創建一個漸進的載入文字效果，以指示載入進度。
-  // https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
-
-  setTimeout(() => {
-    const video = document.querySelector('video');
-    video.play();
-  }, 2000);
+  // 確認檔案加載完畢才撥放
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const video = document.querySelector('video');
+      if (video) {
+        video.play();
+      }
+    }, 2000);
+  });
 };
 
 export default day05;
