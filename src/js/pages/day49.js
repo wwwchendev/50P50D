@@ -12,9 +12,9 @@ const day49 = () => {
 刪除資料 localStorage.removeItem(key)
 清空整個 localStorage.clear();
 */
-  const form = document.getElementById('form');
-  const input = document.getElementById('input');
-  const todosUL = document.getElementById('todos');
+  const form = document.getElementById('day49Form');
+  const input = document.getElementById('day49Input');
+  const todosUL = document.getElementById('day49Todos');
 
   // 取得localstorage中todos欄位的數據
   // 從JSON字串轉回陣列物件
@@ -24,7 +24,7 @@ const day49 = () => {
   // 更新表單
   function updateList() {
     const todoList = [];
-    const todosEl = document.querySelectorAll('li');
+    const todosEl = document.querySelectorAll('.todoli');
     // 把所有待辦事項包裝成物件格式加到todos陣列裡面
     todosEl.forEach((todoEl) => {
       todoList.push({
@@ -50,7 +50,7 @@ const day49 = () => {
     if (todoText && todoText.trim() !== '') {
       // 宣告todoEl用來定義li元素
       const todoEl = document.createElement('li');
-
+      todoEl.classList.add('todoli');
       // 確認狀態是完成的加上completed類別
       if (todo && todo.completed) {
         todoEl.classList.add('completed');
