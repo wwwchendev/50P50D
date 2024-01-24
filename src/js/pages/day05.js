@@ -5,7 +5,7 @@ const day05 = () => {
   projectSlider(5);
   const loadingText = document.querySelector('.loading-text');
   const blur = document.querySelector('.blur');
-  const title = document.querySelector('h1');
+  const title = document.querySelector('#day05Title');
 
   let load = 0;
   function showTitle() {
