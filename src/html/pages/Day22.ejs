@@ -1,6 +1,30 @@
 <main class="projectContainer day22">
-
+  <!-- canva元素 -->
+  <canvas id="canvas" width="800" height="500">
+  </canvas>
+  <div class="toolbox">
+    <div class="brushTool">
+      <button id="decrease">
+        <i class="bi bi-dash-circle-dotted"></i>
+      </button>
+      <span id="size">5</span>
+      <button id="increase">
+        <i class="bi bi-plus-circle-dotted"></i>
+      </button>
+      <!-- inputColor設置色彩 -->
+      <input type="color" id="color">
+    </div>
+    <div class="clearTool">
+      <button id="eraser" class="">
+        <i class="bi bi-eraser-fill"></i>
+      </button>
+      <button id="clear">
+        <i class="bi bi-stars"></i>
+      </button>
+    </div>
+  </div>
 </main>
 <footer>
   <h2>22 Drawing App</h2>
 </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
