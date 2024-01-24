@@ -1,5 +1,4 @@
 import projectSlider from '../components/projectSlider';
-
 import '../../stylesheet/page/_day50.scss';
 
 const day50 = () => {
