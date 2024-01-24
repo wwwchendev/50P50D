@@ -1,0 +1,17 @@
+/* 開發的時候使用的小工具 */
+@import './sass/helpers';
+@import './sass/reset'; /* reset */
+/* variable*/
+@import './sass/variables'; /*👈🏻改字型*/
+@import './sass/bootstrap-grid-custom.min'; /* container, grid (根據variable的容器尺寸)*/
+/* mixin */
+@import './sass/mixin';
+/* base */
+@import './sass/theme'; /*👈🏻改主題顏色*/
+@import './sass/base';
+/* module */
+@import 'module/banner';
+@import 'module/projectSlider';
+/* page */
+/* @import './page/home'; */
+@import './page/notFound';

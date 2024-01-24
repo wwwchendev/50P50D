@@ -1,0 +1,93 @@
+.projectContainer.day02 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .btns {
+    display: flex;
+  }
+
+  /*進度條*/
+  .progress-container {
+    /* 設置為flexbox 內部元素分散對齊 */
+    display: flex;
+    justify-content: space-between;
+    /*設置為絕對定位，讓進度線可以根據容器位置定位*/
+    position: relative;
+    bottom: 30px;
+    /* 寬度設置 */
+    /*設置最大寬度確保不會超過父容器寬度*/
+    max-width: 100%;
+    width: 350px;
+  }
+
+  .progress-container::before {
+    content: '';
+    background-color: #1b1c20;
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    /*定位*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .progressBar {
+    background-color: #c678dd;
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    /*定位*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    /*動畫*/
+    transition: 0.4s ease;
+  }
+
+  /* 圓框*/
+  .circle {
+    background-color: #272b34;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #1b1c20;
+    transition: 0.4s ease;
+  }
+
+  .circle.active {
+    /* background-color:var(--line-border-fill) ; */
+    border-color: #c678dd;
+    /* color:var(--circle-bg-dark); */
+  }
+
+  /* 按鈕 */
+  .btn {
+    background-color: #c678dd;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-style: 14px;
+    &:active {
+      transform: scale(0.98);
+    }
+    &:focus {
+      outline: 0;
+    }
+    &:disabled {
+      background-color: #1b1c20;
+      cursor: not-allowed;
+    }
+  }
+}

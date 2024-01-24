@@ -1,0 +1,76 @@
+main.projectContainer.day37 {
+  --color-bg: #191a21;
+  --color-bg-form: #3d3d3d;
+  --color-primary: #c678dd;
+
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+
+  h1 {
+    letter-spacing: 3px;
+    color: #fff;
+    position: absolute;
+    top: 5%;
+  }
+
+  .poke-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: absolute;
+    top: 15%;
+  }
+
+  /* 每一張寶可夢卡片樣式 */
+  .pokemon {
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 180px;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 背景的圓圈圈 */
+  .pokemon .img-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+  }
+
+  .pokemon .img-container img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  .pokemon .info {
+    margin-top: 20px;
+  }
+
+  .pokemon .info .number {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+  }
+  .pokemon .info .name {
+    margin: 15px 0 7px;
+    letter-spacing: 1px;
+  }
+}

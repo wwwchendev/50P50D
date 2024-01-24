@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+aside.sidebarGroup {
+  // @include marker(1, 1);
+  background-color: rgba($color: #000, $alpha: 1);
+  height: 100vh;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  min-width: 230px;
+  z-index: 99;
+  h1 {
+    margin-bottom: 1rem;
+    a {
+      font-family: 'Titan One', sans-serif;
+      font-size: $font-size-lg;
+      line-height: 0;
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+  p {
+    font-size: $font-size-xs;
+    margin-bottom: 1rem;
+    color: rgba($color: #fff, $alpha: 0.5);
+  }
+
+  ul {
+    // @include marker(1, 1);
+    width: 200px;
+    overflow-y: scroll;
+    height: 90%;
+    padding-right: 1rem;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #141414;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($color: #b319fa, $alpha: 0.75);
+      border-radius: 3px;
+    }
+  }
+  li.sidebarItem {
+    // @include marker(1, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    img {
+      max-width: 100%;
+      filter: grayscale(100%);
+    }
+    p {
+      position: absolute;
+      bottom: 0rem;
+      left: 0.5rem;
+      color: rgba($color: #fff, $alpha: 0.2);
+    }
+    span {
+      position: absolute;
+      top: -0.5rem;
+      left: -0.5rem;
+      padding: 0.6rem 0.5rem;
+      background: rgba($color: #000, $alpha: 1);
+      border-radius: 50%;
+      color: rgba($color: #fff, $alpha: 0.2);
+    }
+    &.active {
+      border-left: 5px solid #b319fa;
+      border-top: 5px solid #b319fa;
+      p,
+      span {
+        color: rgba($color: #fff, $alpha: 1);
+      }
+      span {
+        background: rgba($color: #b319fa, $alpha: 1);
+      }
+      img {
+        filter: grayscale(0%);
+      }
+    }
+    &:hover {
+      transform: scale(0.95);
+      p,
+      span {
+        color: rgba($color: #fff, $alpha: 0.8);
+      }
+    }
+  }
+}

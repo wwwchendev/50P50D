@@ -1,0 +1,77 @@
+main.projectContainer.day33 {
+  --color-bg: #191a21;
+  --color-bg-form: #3d3d3d;
+  --color-primary: #c678dd;
+  box-sizing: border-box;
+  outline: none;
+
+  background-color: var(--color-bg);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 3rem;
+  position: relative;
+  color: #000;
+
+  .add {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  .add:active {
+    transform: scale(0.98);
+  }
+
+  .note {
+    background-color: #fff;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    margin: 30px 20px;
+    height: 200px;
+    width: 200px;
+    overflow-y: auto;
+  }
+
+  .note .tools {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+  }
+
+  .note .tools button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .note textarea {
+    outline: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: none;
+    height: 80%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* 要加 overflow-wrap: break-word; 才會換行 */
+  .main {
+    padding: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hidden {
+    display: none;
+  }
+}

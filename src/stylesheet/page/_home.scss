@@ -1,0 +1,178 @@
+//-----------------------特色
+section.feature {
+  padding: $gap-xl 0;
+  text-align: center;
+  h3 {
+    margin-bottom: $gap-lg;
+    line-height: 1.75;
+    position: relative;
+    @include media-query('md') {
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        background-color: var(--primary);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before {
+        width: 9rem;
+        left: 8%;
+      }
+      &::after {
+        width: 9rem;
+        right: 8%;
+      }
+    }
+    @include media-query('lg') {
+      &::before {
+        left: 23%;
+      }
+      &::after {
+        right: 23%;
+      }
+    }
+  }
+  div {
+    max-width: 100%;
+    margin: 20px auto;
+    @include media-query('lg') {
+      margin: 15px auto;
+    }
+    img {
+      width: 200px;
+      object-fit: cover;
+    }
+    h5 {
+      font-size: #{calc(18 / 16)} rem;
+      margin: 10px 0;
+    }
+    p {
+      display: block;
+      text-align: left;
+      margin: 0 auto;
+    }
+  }
+}
+
+//-----------------------主廚
+section.chef {
+  background-color: var(--bg-secondary);
+  color: $color-white;
+  * {
+    padding: 0;
+  }
+  .container {
+    min-height: 100%;
+    margin: 0 auto;
+    min-width: 100%;
+    .imgWrapper {
+      padding: 0;
+      background-image: url('../assets/images/main_chef_brown.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 460px;
+    }
+    .content {
+      padding: $gap-xl;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h5 {
+        line-height: 0.5;
+      }
+    }
+  }
+  @include media-query('md') {
+    height: 460px;
+    .container {
+      display: flex;
+      justify-content: center;
+      min-width: auto;
+      .content {
+        padding: $gap-md;
+      }
+    }
+  }
+}
+
+//-----------------------感想
+section.recommand {
+  padding: $gap-xl 0;
+  h3 {
+    margin-bottom: $gap-lg;
+    line-height: 1.75;
+    text-align: center;
+  }
+  ul {
+    @include flexCenter;
+    width: 100%;
+    margin: 0 auto;
+    li {
+      @include flexCenter;
+      text-align: left;
+      align-items: start;
+    }
+  }
+  .msg {
+    h6 {
+      font-size: 1.2rem;
+    }
+    p {
+      margin-bottom: $gap-xs;
+    }
+    p:last-child {
+      text-align: right;
+      opacity: 0.75;
+    }
+  }
+  img {
+    max-width: 67px;
+    object-fit: cover;
+  }
+}
+//-----------------------地圖
+section.map {
+  padding: $gap-xl 0;
+  background: rgba(250, 250, 250, 0.7);
+  .row {
+    margin: 0 auto;
+    padding: 0;
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: $gap-lg;
+  }
+  .container {
+    // @include marker(3, 3);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    form {
+      input[type='radio'] {
+        margin-top: 0.5rem;
+      }
+      .radioGroup {
+        label {
+          margin-right: 1.5rem;
+          margin-bottom: 1rem;
+          cursor: pointer;
+        }
+      }
+      .col-12 {
+        padding: 0;
+        &:last-child {
+          display: flex;
+          justify-content: end;
+          input[type='submit'] {
+            margin-left: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}

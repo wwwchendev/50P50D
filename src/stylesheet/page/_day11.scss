@@ -1,0 +1,32 @@
+main.projectContainer.day11 {
+  .key {
+    border: 1px solid #999;
+    background-color: #eee;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    font-size: 20px;
+    padding: 20px;
+    flex-direction: column;
+    margin: 10px;
+    font-weight: bold;
+    min-width: 150px;
+    position: relative;
+    color: #1f1f1f;
+  }
+
+  .key small {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .key {
+      margin: 10px 0px;
+    }
+  }
+}

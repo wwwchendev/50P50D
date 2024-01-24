@@ -1,0 +1,107 @@
+main.projectContainer.day41 {
+  --color-bg: #191a21;
+  --color-bg-form: #3d3d3d;
+  --color-primary: #c678dd;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+
+  .main {
+    border-radius: 10px;
+    padding: 20px 80px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .code-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  .code {
+    caret-color: transparent;
+    border-radius: 5px;
+    font-size: 75px;
+    height: 80px;
+    width: 80px;
+    border: 1px solid #eee;
+    margin: 1%;
+    text-align: center;
+    font-weight: 300;
+    -moz-appearance: textfield;
+  }
+
+  .code::-webkit-outer-spin-button,
+  .code::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .code:valid {
+    border-color: #b018ec;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+  }
+
+  .btnGroup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+
+  button {
+    background-color: var(--color-bg-form);
+    display: inline-block;
+    padding: 10px 20px;
+    line-height: 20px;
+    max-width: 400px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 0 50px;
+  }
+  input {
+    color: #727272;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  button.submit {
+    background-color: var(--color-primary);
+  }
+
+  h4 {
+    margin: 20px 0;
+  }
+  a {
+    color: #fff;
+    /* text-decoration: none; */
+    margin-right: 30px;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 600px) {
+    .code-container {
+      flex-wrap: wrap;
+    }
+
+    .code {
+      font-size: 60px;
+      height: 80px;
+      max-width: 70px;
+    }
+  }
+}

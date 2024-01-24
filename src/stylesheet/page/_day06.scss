@@ -1,0 +1,73 @@
+main.projectContainer.day06 {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  line-height: 1.5;
+  position: relative;
+  h1 {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+  }
+  .articleWrap {
+    position: absolute;
+    top: 10%;
+  }
+  p {
+    font-size: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+
+  article {
+    display: flex;
+    width: 66vw;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    transition: transform 0.2s ease-in;
+    /* transition: transform 0.5s ease-in;*/
+    transform: translateY(80%);
+    /* transform: translateX(300%); */
+    .picture {
+      min-width: 30vw;
+      width: 30vw;
+      min-height: 300px;
+    }
+    .content {
+      margin: 0 50px;
+    }
+    &.show {
+      transform: translateY(0);
+      /* transform: translateX(0); */
+    }
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      /* transform: translateX(-300%); */
+    }
+  }
+
+  /*平板以下尺寸*/
+  @media (max-width: 992px) {
+    article {
+      width: 90vw;
+      margin: 20px 0;
+    }
+    article,
+    article:nth-of-type(even) {
+      flex-direction: column;
+      align-items: start;
+      transform: translateX(0%);
+    }
+    article .picture {
+      width: 100%;
+    }
+    article .content {
+      margin: 0px;
+    }
+  }
+}

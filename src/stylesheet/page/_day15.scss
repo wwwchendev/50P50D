@@ -1,0 +1,24 @@
+main.projectContainer.day15 {
+  --color-bg: #191a21;
+  --color-bg-form: #3d3d3d;
+  --color-primary: #c678dd;
+
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+  }
+
+  .counter {
+    font-size: 60px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 580px) {
+    body {
+      flex-direction: column;
+    }
+  }
+}

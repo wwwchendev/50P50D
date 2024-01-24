@@ -1,0 +1,58 @@
+main.projectContainer.day04 {
+  background: linear-gradient(90deg, #9c8af3, #7158e2);
+  color: #000;
+  /* 搜尋元素 */
+  .search {
+    position: relative;
+    height: 50px;
+  }
+
+  /* 搜尋輸入框active*/
+  .search .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+  }
+
+  /* 搜尋輸入框active 變寬 */
+  .search.active .input {
+    width: 200px;
+  }
+
+  /* 搜尋按鈕 */
+  .btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+  }
+
+  /* 搜尋按鈕active 位移*/
+  .search.active .btn {
+    transform: translateX(198px);
+  }
+
+  /* 取消點擊時的外框 */
+  .btn:focus,
+  .input:focus {
+    outline: none;
+  }
+
+  #showText {
+    display: none;
+    color: #ffffff;
+  }
+  #showText.active {
+    display: flex;
+  }
+}

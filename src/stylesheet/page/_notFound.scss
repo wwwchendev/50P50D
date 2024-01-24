@@ -1,0 +1,19 @@
+.notFound {
+  @include flexCenter;
+  flex-direction: column;
+  padding: $gap-xl;
+  border: 2px solid #cccccc;
+  margin-bottom: $gap-xl;
+  h2 {
+    font-size: $font-size-xl;
+    color: $color-danger;
+  }
+  p {
+    font-size: $font-size-lg;
+    letter-spacing: 0.25rem;
+    font-weight: bold;
+  }
+  &.topOffset {
+    margin-top: 100px;
+  }
+}

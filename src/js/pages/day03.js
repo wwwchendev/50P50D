@@ -1,4 +1,3 @@
-import '../../stylesheet/_reset.scss';
 import '../../stylesheet/page/_day03.scss';
 import projectSlider from '../components/projectSlider';
 
